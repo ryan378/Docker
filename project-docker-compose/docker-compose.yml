@@ -37,9 +37,9 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - vol_mycompose_zul:/var/lib/postgresql/data
+      - vol_mycompose_ryan:/var/lib/postgresql/data
     networks:
-      - net_mycompose_zul
+      - net_mycompose_ryan
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
       interval: 10s
@@ -47,8 +47,8 @@ services:
       retries: 5
 
 volumes:
-  vol_mycompose_zul:
+  vol_mycompose_ryan:
 
 networks:
-  net_mycompose_zul:
+  net_mycompose_ryan:
     driver: bridge
